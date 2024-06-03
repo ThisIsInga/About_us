@@ -1,0 +1,63 @@
+/*обнуление*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*центрирование элементов*/
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.image{
+    position: relative;
+    z-index: 2;
+}
+
+#img_circle {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    z-index: -1; /* Изменяем значение z-index так, что круг находятся ЗА девушкой */
+}
+#img_girl {
+    height: 300px;
+    width: 300px;
+    z-index: 1; /* обязательно и здесь указать z-index */
+     transition: all 0.5s; /* добавляем анимацию сюда */
+}
+
+/*анимация вниз*/
+#img_girl:hover {
+    margin-top: 30px;
+    z-index: 3;
+}
+
+
+.linear{
+    margin-top: 10px;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(170deg, #fdcf08, #916206);
+}
+/*центрируем, здаем размер и изменяем цвет текста*/
+.text{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+h2{
+    font-size: 50px;
+    z-index: 2;
+}
+p{
+    font-size: 25px;
+    color: #332d2d;
+    z-index: 2;
+}
+
+
